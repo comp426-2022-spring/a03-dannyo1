@@ -4,8 +4,8 @@ const app = express()
 
 // var port = 3000;
 
-const server = app.listen(3000, () => {
-    console.log('App listening on port %PORT%'.replace('%PORT%',3000))
+const server = app.listen(HTTP_PORT, () => {
+    console.log('App listening on port %PORT%'.replace('%PORT%',HTTP_PORT))
 });
 
 
