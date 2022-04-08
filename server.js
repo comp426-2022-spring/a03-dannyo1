@@ -8,10 +8,13 @@ const server = app.listen(port, () => {
     console.log('App listening on port %PORT%'.replace('%PORT%',port))
 });
 
+
+
 app.get('/app', (req, res) => {
     res.status(200).send('200 OK')
     res.type("text/plain")
 })
+
 
 app.get('/app/flip', (req, res) => {
     res.status(200).json({ 'flip' : coinFlip()})
@@ -24,14 +27,14 @@ app.get('/app/flip', (req, res) => {
  })
 
  app.get('/app/flip/call/:guess', (req, res) => {
-     res.status(200).json( flipACoin(req.params.guess))
+     res.status(200).json(flipACoin(req.params.guess))
  })
 
-app.use(function(req, res) {
-    res.status(404).send("404 NOT FOUND")
-    res.type("text/plain")
-})
 
+ app.use(function(req, res) {
+    res.status(404).send("404 NOT FOUND")
+    // res.type("text/plain")
+})
 
 
 function coinFlip() {
