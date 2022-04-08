@@ -2,7 +2,7 @@
 const express = require('express')
 const app = express()
 
-var port = 5000;
+var port = 3000;
 
 const server = app.listen(port, () => {
     console.log('App listening on port %PORT%'.replace('%PORT%',port))
